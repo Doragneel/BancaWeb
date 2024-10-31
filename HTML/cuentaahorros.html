@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta de Ahorros - Banco Caja Social</title>
+    <link rel="stylesheet" href="styles-cuenta-ahorros.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="app-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
+            <nav>
+                <a href="#" class="btn btn-ghost">Inicio</a>
+                <a href="#" class="btn btn-ghost">Productos</a>
+                <a href="#" class="btn btn-primary">Ingresa a tu portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Cuenta de Ahorros</h1>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Ahorra para tu futuro con nosotros</h2>
+                <p>Nuestra Cuenta de Ahorros te ofrece seguridad, rentabilidad y facilidad para manejar tu dinero.</p>
+                <a href="#abrir-cuenta" class="btn btn-primary">Abrir cuenta ahora</a>
+            </div>
+            <img src="mi-banco-amigo-evento.png" alt="Persona ahorrando dinero" class="hero-image">
+        </section>
+
+        <section class="benefits">
+            <h2>Beneficios de nuestra Cuenta de Ahorros</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="credito1.png" alt="Ícono sin cuota de manejo" class="benefit-icon">
+                    <h3>Sin cuota de manejo</h3>
+                    <p>Disfruta de tu cuenta sin costos mensuales de administración.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="intereses.png" alt="Ícono de intereses" class="benefit-icon">
+                    <h3>Intereses diarios</h3>
+                    <p>Gana intereses sobre tu saldo diario, pagados mensualmente.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="celu.png" alt="Ícono de app móvil" class="benefit-icon">
+                    <h3>Banca móvil</h3>
+                    <p>Accede a tu cuenta desde cualquier lugar con nuestra app.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="seguridad.png" alt="Ícono de seguridad" class="benefit-icon">
+                    <h3>Seguridad garantizada</h3>
+                    <p>Tu dinero está protegido con los más altos estándares de seguridad.</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="container">
+            <h1>Cuenta de Ahorros</h1>
+            
+            <section class="account-summary">
+                <h2>Resumen de tu cuenta</h2>
+                <div class="balance-box">
+                    <p>Saldo actual:</p>
+                    <h3 id="current-balance">$0.00</h3>
+                </div>
+                <div class="interest-box">
+                    <p>Intereses generados (anual):</p>
+                    <h3 id="annual-interest">$0.00</h3>
+                </div>
+            </section>
+    
+            <section class="account-actions">
+                <h2>Gestiona tu cuenta</h2>
+                <div class="action-buttons">
+                    <button id="deposit-btn" class="btn btn-primary">Depositar</button>
+                    <button id="withdraw-btn" class="btn btn-secondary">Retirar</button>
+                </div>
+                <div id="transaction-form" class="hidden">
+                    <input type="number" id="transaction-amount" placeholder="Monto" min="0" step="0.01">
+                    <button id="confirm-transaction" class="btn btn-primary">Confirmar</button>
+                    <button id="cancel-transaction" class="btn btn-ghost">Cancelar</button>
+                </div>
+            </section>
+    
+            <section class="interest-calculator">
+                <h2>Calculadora de intereses</h2>
+                <div class="calculator-form">
+                    <label for="interest-rate">Tasa de interés anual (%)</label>
+                    <input type="number" id="interest-rate" value="2.5" min="0" max="100" step="0.1">
+                    <button id="calculate-interest" class="btn btn-primary">Calcular intereses</button>
+                </div>
+            </section>
+    
+            <section class="transaction-history">
+                <h2>Historial de transacciones</h2>
+                <ul id="transaction-list">
+                    <!-- Las transacciones se agregarán aquí dinámicamente -->
+                </ul>
+            </section>
+        </main>
+        </main>
+    
+
+        <section id="abrir-cuenta" class="open-account">
+            <h2>¿Cómo abrir tu Cuenta de Ahorros?</h2>
+            <ol class="steps">
+                <li>Reúne tus documentos: Cédula de ciudadanía y comprobante de domicilio.</li>
+                <li>Visita nuestra sucursal más cercana o inicia el proceso en línea.</li>
+                <li>Completa el formulario de apertura de cuenta.</li>
+                <li>Realiza tu depósito inicial (mínimo $50.000 COP).</li>
+                <li>¡Listo! Tu cuenta estará activa en 24 horas hábiles.</li>
+            </ol>
+            <a href="#" class="btn btn-primary">Iniciar proceso en línea</a>
+        </section>
+
+        <section class="faq">
+            <h2>Preguntas frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Cuál es el saldo mínimo requerido?</h3>
+                    <div class="accordion-content">
+                        <p>El saldo mínimo requerido para mantener tu cuenta activa es de $50.000 COP.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Puedo realizar retiros en cajeros automáticos?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, puedes realizar retiros en cualquier cajero de nuestra red sin costo adicional.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Cómo puedo consultar mi saldo?</h3>
+                    <div class="accordion-content">
+                        <p>Puedes consultar tu saldo a través de nuestra app móvil, en línea, en cajeros automáticos o en cualquiera de nuestras sucursales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <p>Línea de atención: 01 8000 910 038</p>
+                    <p>Bogotá: (601) 307 7060</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Tarifas</a></li>
+                        <li><a href="#">Defensor del Consumidor Financiero</a></li>
+                        <li><a href="#">Educación Financiera</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Banco Caja Social. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script-cuenta-ahorros.js"></script>
+</body>
+</html>
