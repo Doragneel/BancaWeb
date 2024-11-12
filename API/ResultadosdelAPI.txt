@@ -1,0 +1,14 @@
+
+[11-Nov-2024 17:22:49 Europe/Berlin] PHP Notice:  Undefined index: contrasena in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 22
+[11-Nov-2024 17:46:08 Europe/Berlin] PHP Notice:  Undefined variable: TextoEncriptado in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 62
+[11-Nov-2024 17:46:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\banco_imaginario\API\Main.class.php:67
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 67
+[11-Nov-2024 18:59:06 Europe/Berlin] PHP Notice:  Undefined variable: JsonToken in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 56
+[11-Nov-2024 18:59:06 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 63
+[11-Nov-2024 18:59:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 64
+[11-Nov-2024 19:09:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method Main::DesencriptacionDetoken() from context '' in C:\xampp\htdocs\banco_imaginario\API\Main.class.php:80
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\banco_imaginario\API\Main.class.php on line 80

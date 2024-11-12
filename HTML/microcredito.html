@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microcrédito - Banco Caja Social</title>
+    <link rel="stylesheet" href="../CSS/styles-microcredito.css">
+    <link rel="stylesheet" href="../CSS/styleschatbot.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../IMAGENES/app-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
+            <nav>
+                <a href="../index.html" class="btn btn-ghost">Inicio</a>
+                <a href="#" class="btn btn-ghost">Productos</a>
+                <a href="login.html" class="btn btn-primary">Ingresa a tu portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Microcrédito</h1>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Impulsa tu negocio con nuestro Microcrédito</h2>
+                <p>Financiamiento rápido y accesible para emprendedores y pequeños empresarios. ¡Haz crecer tu negocio hoy!</p>
+                <a href="#solicitar" class="btn btn-primary">Solicitar ahora</a>
+            </div>
+            <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/microcredito-hero.jpg" alt="Emprendedor feliz en su negocio" class="hero-image">
+        </section>
+
+        <section class="benefits">
+            <h2>Beneficios de nuestro Microcrédito</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-money.png" alt="Ícono de dinero" class="benefit-icon">
+                    <h3>Montos flexibles</h3>
+                    <p>Desde $500.000 hasta $25.000.000 para adaptarse a tus necesidades.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-calendar.png" alt="Ícono de calendario" class="benefit-icon">
+                    <h3>Plazos cómodos</h3>
+                    <p>Hasta 36 meses para pagar, ajustándose a tu flujo de caja.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-percentage.png" alt="Ícono de porcentaje" class="benefit-icon">
+                    <h3>Tasas competitivas</h3>
+                    <p>Intereses ajustados al mercado de microcréditos.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-support.png" alt="Ícono de soporte" class="benefit-icon">
+                    <h3>Asesoría personalizada</h3>
+                    <p>Te acompañamos en todo el proceso para impulsar tu negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solicitar" class="apply-loan">
+            <h2>¿Cómo solicitar tu Microcrédito?</h2>
+            <ol class="steps">
+                <li>Reúne los documentos necesarios: identificación, RUT, extractos bancarios de los últimos 3 meses.</li>
+                <li>Completa nuestro formulario de solicitud en línea o visita una de nuestras sucursales.</li>
+                <li>Un asesor especializado evaluará tu solicitud y te contactará en 24-48 horas.</li>
+                <li>Firma los documentos del crédito una vez aprobado.</li>
+                <li>Recibe el desembolso y comienza a hacer crecer tu negocio.</li>
+            </ol>
+            <a href="#" class="btn btn-primary">Iniciar solicitud en línea</a>
+        </section>
+
+        <section class="loan-calculator">
+            <h2>Calculadora de Microcrédito</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="loan-amount">Monto del préstamo:</label>
+                    <input type="number" id="loan-amount" placeholder="Ej: 5000000" min="500000" max="25000000" step="100000">
+                </div>
+                <div class="form-group">
+                    <label for="loan-term">Plazo (meses):</label>
+                    <input type="number" id="loan-term" placeholder="Ej: 12" min="1" max="36" step="1">
+                </div>
+                <button id="calculate-loan" class="btn btn-primary">Calcular cuota mensual</button>
+            </div>
+            <div id="loan-result" class="loan-result hidden">
+                <h3>Cuota mensual estimada:</h3>
+                <p id="monthly-payment">$0</p>
+                <p class="disclaimer">* Este cálculo es una estimación y puede variar. La tasa de interés final dependerá de la evaluación de tu solicitud.</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/testimonial-1.jpg" alt="Foto de María" class="testimonial-image">
+                    <blockquote>"Gracias al microcrédito del Banco Caja Social, pude expandir mi tienda de abarrotes. El proceso fue rápido y el asesor muy amable."</blockquote>
+                    <cite>- María, dueña de tienda</cite>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/testimonial-2.jpg" alt="Foto de Carlos" class="testimonial-image">
+                    <blockquote>"Solicité un microcrédito para comprar maquinaria para mi taller. Ahora puedo producir más y he contratado dos empleados más."</blockquote>
+                    <cite>- Carlos, carpintero</cite>
+                </div>
+            </div>
+        </section>
+
+        <!--<section class="faq">
+            <h2>Preguntas frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Qué documentos necesito para solicitar un microcrédito?</h3>
+                    <div class="accordion-content">
+                        <p>Necesitarás tu documento de identidad, RUT, extractos bancarios de los últimos 3 meses, y documentos que acrediten tu actividad económica (facturas, contratos, etc.).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Cuánto tiempo toma aprobar mi solicitud?</h3>
+                    <div class="accordion-content">
+                        <p>El proceso de evaluación generalmente toma entre 24 y 48 horas hábiles, dependiendo de la completitud de la documentación proporcionada.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Puedo pagar mi microcrédito antes del plazo?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, puedes realizar pagos anticipados o cancelar tu microcrédito antes del plazo sin penalidad. Esto te ayudará a reducir los intereses pagados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <p>Línea de atención: 01 8000 910 038</p>
+                    <p>Bogotá: (601) 307 7060</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Tasas y tarifas</a></li>
+                        <li><a href="#">Simulador de microcrédito</a></li>
+                        <li><a href="#">Educación financiera</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Banco Caja Social. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <img id="chatbotButton" src="../IMAGENES/app-banco-caja-social.png" alt="Abrir Chat" style="cursor: pointer; width: 75px; height: 75px;">
+    <div id="chatbotContainer" style="display: none;">
+        <div>
+            <span>Asistente Virtual</span>
+
+            <button id="closeChat">Cerrar</button>
+            <button id="inicioChat">Atras</button>
+        </div>
+        <div id="contenidoChat">
+ 
+            <button id="btnConsultaCuenta">Realizar consulta de cuenta</button>
+            <button id="btnPreguntas">Preguntas</button>
+        </div>
+    
+
+        <div id="formConsulta" style="display: none;">
+            <p>Hola, para verificar tu cuenta ingresa tu número de identificación:</p>
+            <input type="text" id="identificacion" placeholder="Número de Identificación">
+            <div id="respuesta" class="respuestasfrecuentes"></div>
+        </div>
+
+        <div id="menuOpciones" style="display: none;">
+            <button onclick="mostrarPreguntas('cuentaAhorros')">Cuenta de Ahorros</button>
+            <button onclick="mostrarPreguntas('creditoVivienda')">Crédito de Vivienda</button>
+            <button onclick="mostrarPreguntas('cdt')">CDT</button>
+            <button onclick="mostrarPreguntas('microcredito')">Microcrédito</button>
+        </div>
+        <div id="preguntasContainer">
+
+    <script src="../JS/script-microcredito.js"></script>
+    <script src="../JS/scriptchat.js"></script>
+</body>
+</html>

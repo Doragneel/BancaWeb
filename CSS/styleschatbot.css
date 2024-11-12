@@ -1,0 +1,223 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#chatbotButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#chatbotButton:hover {
+    background-color: #0056b3;
+}
+
+
+#chatbotContainer {
+    display: none;
+    width: 320px;
+    max-height: 400px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #1e3d58;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+    overflow-y: auto;
+    animation: slideIn 0.5s ease forwards;
+    display: none;
+}
+
+#chatbotContainer.show {
+    display: block;
+    visibility: visible;
+    opacity: 1; 
+    animation: slideIn 0.5s ease forwards;
+}
+
+
+#chatbotContainer div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+#preguntasContainer .preguntaRespuesta:first-child {
+    display: block !important; 
+    font-weight: normal;
+    display: block;
+    flex: none; 
+}
+
+#chatbotContainer span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#closeChat,
+#btnInicio {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #1e3d58;
+    padding: 5px;
+    
+}
+#closechat{
+    animation: slideOut 0.5s ease forwards;
+    visibility: hidden;
+}
+
+#closeChat:hover {
+    color: #dc3545;
+    
+}
+
+#chatbotContainer input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+
+#respuesta {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #e6f4ff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    max-height: none; 
+    overflow-y: auto; 
+
+}
+
+#preguntasContainer {
+    display: none;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#preguntasContainer .preguntaRespuesta {
+    margin-bottom: 10px;
+}
+
+#preguntasContainer .preguntaRespuesta button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#preguntasContainer .respuestabtn {
+    display: none;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+button:hover {
+    background-color: hsl(211, 100%, 35%);
+}
+
+
+#menuOpciones button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menuOpciones button:hover {
+    background-color: #0056b3;
+}
+
+
+#formConsulta {
+    margin-top: 10px;
+    position: relative;
+    padding: 15px;
+    min-height: 200px;
+}
+
+#formConsulta button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.respuestabtn {
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.respuestabtn:hover {
+    background-color: #e0e0e0;
+}
+
+.respuestabtn {
+    display: block;
+    width: 100%;
+}

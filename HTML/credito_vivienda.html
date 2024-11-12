@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédito de Vivienda - Banco Caja Social</title>
+    <link rel="stylesheet" href="../CSS/styles-credito-vivienda.css">
+    <link rel="stylesheet" href="../CSS/styleschatbot.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/logo-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
+            <nav>
+                <a href="../index.html" class="btn btn-ghost">Inicio</a>
+                <a href="#" class="btn btn-ghost">Productos</a>
+                <a href="login.html" class="btn btn-primary">Ingresa a tu portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Crédito de Vivienda</h1>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Haz realidad el sueño de tu casa propia</h2>
+                <p>Con nuestro Crédito de Vivienda, podrás financiar hasta el 80% del valor de tu nuevo hogar.</p>
+                <a href="#solicitar" class="btn btn-primary">Solicitar ahora</a>
+            </div>
+            <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/credito-vivienda-hero.jpg" alt="Familia feliz en su nueva casa" class="hero-image">
+        </section>
+
+        <section class="benefits">
+            <h2>Beneficios de nuestro Crédito de Vivienda</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-percentage.png" alt="Ícono de porcentaje" class="benefit-icon">
+                    <h3>Tasas competitivas</h3>
+                    <p>Ofrecemos tasas de interés atractivas para que puedas cumplir tu sueño.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-calendar.png" alt="Ícono de calendario" class="benefit-icon">
+                    <h3>Plazos flexibles</h3>
+                    <p>Elige el plazo que mejor se adapte a tu capacidad de pago, hasta 30 años.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-house.png" alt="Ícono de casa" class="benefit-icon">
+                    <h3>Financiación hasta 80%</h3>
+                    <p>Financia hasta el 80% del valor de tu vivienda nueva o usada.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-support.png" alt="Ícono de soporte" class="benefit-icon">
+                    <h3>Asesoría personalizada</h3>
+                    <p>Te acompañamos en todo el proceso para que tomes la mejor decisión.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solicitar" class="apply-loan">
+            <h2>¿Cómo solicitar tu Crédito de Vivienda?</h2>
+            <ol class="steps">
+                <li>Reúne los documentos necesarios: identificación, comprobantes de ingresos, declaración de renta.</li>
+                <li>Completa nuestro formulario de solicitud en línea o visita una de nuestras sucursales.</li>
+                <li>Un asesor se pondrá en contacto contigo para evaluar tu solicitud y ofrecerte las mejores condiciones.</li>
+                <li>Aprobado tu crédito, firmaremos los documentos y realizaremos el desembolso.</li>
+                <li>¡Disfruta de tu nuevo hogar!</li>
+            </ol>
+            <a href="#" class="btn btn-primary">Iniciar solicitud en línea</a>
+        </section>
+
+        <section class="loan-calculator">
+            <h2>Calculadora de Crédito</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="loan-amount">Monto del préstamo:</label>
+                    <input type="number" id="loan-amount" placeholder="Ej: 200000000" min="0" step="1000000">
+                </div>
+                <div class="form-group">
+                    <label for="loan-term">Plazo (años):</label>
+                    <input type="number" id="loan-term" placeholder="Ej: 20" min="5" max="30" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="interest-rate">Tasa de interés anual (%):</label>
+                    <input type="number" id="interest-rate" placeholder="Ej: 8.5" min="0" max="20" step="0.1">
+                </div>
+                <button id="calculate-loan" class="btn btn-primary">Calcular cuota mensual</button>
+            </div>
+            <div id="loan-result" class="loan-result hidden">
+                <h3>Cuota mensual estimada:</h3>
+                <p id="monthly-payment">$0</p>
+                <p class="disclaimer">* Este cálculo es una estimación y puede variar.</p>
+            </div>
+        </section>
+
+        <!--<section class="faq">
+            <h2>Preguntas frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Cuál es el monto mínimo y máximo que puedo solicitar?</h3>
+                    <div class="accordion-content">
+                        <p>El monto mínimo es de 50 millones de pesos y el máximo dependerá de tu capacidad de endeudamiento y el valor de la vivienda.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Puedo usar el crédito para comprar vivienda usada?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, nuestro Crédito de Vivienda puede ser utilizado tanto para vivienda nueva como usada.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Qué documentos necesito para solicitar el crédito?</h3>
+                    <div class="accordion-content">
+                        <p>Necesitarás tu documento de identidad, comprobantes de ingresos de los últimos 3 meses, declaración de renta (si aplica) y una cotización o promesa de compraventa del inmueble.</p>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <p>Línea de atención: 01 8000 910 038</p>
+                    <p>Bogotá: (601) 307 7060</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Tasas y tarifas</a></li>
+                        <li><a href="#">Simulador de crédito</a></li>
+                        <li><a href="#">Educación financiera</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Banco Caja Social. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <img id="chatbotButton" src="../IMAGENES/app-banco-caja-social.png" alt="Abrir Chat" style="cursor: pointer; width: 75px; height: 75px;">
+    <div id="chatbotContainer" style="display: none;">
+        <div>
+            <span>Asistente Virtual</span>
+
+            <button id="closeChat">Cerrar</button>
+            <button id="inicioChat">Atras</button>
+        </div>
+        <div id="contenidoChat">
+ 
+            <button id="btnConsultaCuenta">Realizar consulta de cuenta</button>
+            <button id="btnPreguntas">Preguntas</button>
+        </div>
+    
+
+        <div id="formConsulta" style="display: none;">
+            <p>Hola, para verificar tu cuenta ingresa tu número de identificación:</p>
+            <input type="text" id="identificacion" placeholder="Número de Identificación">
+            <div id="respuesta" class="respuestasfrecuentes"></div>
+        </div>
+
+        <div id="menuOpciones" style="display: none;">
+            <button onclick="mostrarPreguntas('cuentaAhorros')">Cuenta de Ahorros</button>
+            <button onclick="mostrarPreguntas('creditoVivienda')">Crédito de Vivienda</button>
+            <button onclick="mostrarPreguntas('cdt')">CDT</button>
+            <button onclick="mostrarPreguntas('microcredito')">Microcrédito</button>
+        </div>
+        <div id="preguntasContainer">
+
+    <script src="../JS/script-credito-vivienda.js"></script>
+    <script src="../JS/scriptchat.js"></script>
+</body>
+</html>

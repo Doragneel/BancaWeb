@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDT - Certificado de Depósito a Término - Banco Caja Social</title>
+    <link rel="stylesheet" href="../CSS/styles-cdt.css">
+    <link rel="stylesheet" href="../CSS/styleschatbot.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/logo-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
+            <nav>
+                <a href="../index.html" class="btn btn-ghost">Inicio</a>
+                <a href="#" class="btn btn-ghost">Productos</a>
+                <a href="login.html" class="btn btn-primary">Ingresa a tu portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>CDT - Certificado de Depósito a Término</h1>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Invierte con seguridad y obtén los mejores rendimientos</h2>
+                <p>Con nuestro CDT, tu dinero crece mientras duermes. Tasas competitivas y plazos flexibles para que alcances tus metas financieras.</p>
+                <a href="#simular" class="btn btn-primary">Simular mi inversión</a>
+            </div>
+            <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/cdt-hero.jpg" alt="Persona feliz revisando sus finanzas" class="hero-image">
+        </section>
+
+        <section class="benefits">
+            <h2>Beneficios de nuestro CDT</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-percentage.png" alt="Ícono de porcentaje" class="benefit-icon">
+                    <h3>Tasas competitivas</h3>
+                    <p>Obtén los mejores rendimientos del mercado para tu inversión.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-calendar.png" alt="Ícono de calendario" class="benefit-icon">
+                    <h3>Plazos flexibles</h3>
+                    <p>Elige el plazo que mejor se adapte a tus necesidades, desde 30 hasta 540 días.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-shield.png" alt="Ícono de escudo" class="benefit-icon">
+                    <h3>Seguridad garantizada</h3>
+                    <p>Tu inversión está respaldada por el Banco Caja Social y el Fondo de Garantías de Instituciones Financieras (Fogafín).</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="https://fvlpvvbvgvprjkwxcwvs.supabase.co/storage/v1/object/public/assets/icon-money.png" alt="Ícono de dinero" class="benefit-icon">
+                    <h3>Monto mínimo accesible</h3>
+                    <p>Comienza a invertir desde $500,000 pesos colombianos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="simular" class="cdt-simulator">
+            <h2>Simulador de CDT</h2>
+            <div class="simulator-form">
+                <div class="form-group">
+                    <label for="investment-amount">Monto a invertir:</label>
+                    <input type="number" id="investment-amount" placeholder="Ej: 1000000" min="500000" step="100000">
+                </div>
+                <div class="form-group">
+                    <label for="investment-term">Plazo (días):</label>
+                    <select id="investment-term">
+                        <option value="30">30 días</option>
+                        <option value="60">60 días</option>
+                        <option value="90">90 días</option>
+                        <option value="180">180 días</option>
+                        <option value="360">360 días</option>
+                        <option value="540">540 días</option>
+                    </select>
+                </div>
+                <button id="simulate-cdt" class="btn btn-primary">Simular rendimiento</button>
+            </div>
+            <div id="simulation-result" class="simulation-result hidden">
+                <h3>Resultado de la simulación:</h3>
+                <p>Monto invertido: <span id="result-amount"></span></p>
+                <p>Plazo: <span id="result-term"></span></p>
+                <p>Tasa de interés: <span id="result-rate"></span></p>
+                <p>Rendimiento estimado: <span id="result-earnings"></span></p>
+                <p>Monto total al vencimiento: <span id="result-total"></span></p>
+                <p class="disclaimer">* Esta simulación es una estimación y puede variar. Las tasas están sujetas a cambios sin previo aviso.</p>
+            </div>
+        </section>
+
+        <section class="how-to-invest">
+            <h2>¿Cómo invertir en un CDT?</h2>
+            <ol class="steps">
+                <li>Decide el monto que deseas invertir (mínimo $500,000).</li>
+                <li>Elige el plazo que mejor se adapte a tus objetivos financieros.</li>
+                <li>Visita una de nuestras sucursales o ingresa a tu banca en línea.</li>
+                <li>Presenta tu documento de identidad y realiza la apertura del CDT.</li>
+                <li>Recibe tu certificado y espera a que tu dinero crezca.</li>
+            </ol>
+            <a href="#" class="btn btn-primary">Abrir mi CDT ahora</a>
+        </section>
+
+        <!--<section class="faq">
+            <h2>Preguntas frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Qué pasa si necesito mi dinero antes del vencimiento?</h3>
+                    <div class="accordion-content">
+                        <p>Los CDT están diseñados para mantenerse hasta su vencimiento. Sin embargo, en caso de emergencia, puedes solicitar la cancelación anticipada. Ten en cuenta que esto puede implicar penalidades o la pérdida de los intereses generados.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Puedo reinvertir mi CDT al vencimiento?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, puedes renovar tu CDT al vencimiento. Incluso puedes configurar la renovación automática para que tu inversión siga creciendo sin interrupciones.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Los intereses de mi CDT están sujetos a retención en la fuente?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, los rendimientos financieros están sujetos a una retención en la fuente del 4% sobre los intereses pagados. Esta retención se aplica en el momento del pago o abono en cuenta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <p>Línea de atención: 01 8000 910 038</p>
+                    <p>Bogotá: (601) 307 7060</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Tasas y tarifas</a></li>
+                        <li><a href="#">Simulador de CDT</a></li>
+                        <li><a href="#">Educación financiera</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Banco Caja Social. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <img id="chatbotButton" src="../IMAGENES/app-banco-caja-social.png" alt="Abrir Chat" style="cursor: pointer; width: 75px; height: 75px;">
+    <div id="chatbotContainer" style="display: none;">
+        <div>
+            <span>Asistente Virtual</span>
+
+            <button id="closeChat">Cerrar</button>
+            <button id="inicioChat">Atras</button>
+        </div>
+        <div id="contenidoChat">
+ 
+            <button id="btnConsultaCuenta">Realizar consulta de cuenta</button>
+            <button id="btnPreguntas">Preguntas</button>
+        </div>
+    
+
+        <div id="formConsulta" style="display: none;">
+            <p>Hola, para verificar tu cuenta ingresa tu número de identificación:</p>
+            <input type="text" id="identificacion" placeholder="Número de Identificación">
+            <div id="respuesta" class="respuestasfrecuentes"></div>
+        </div>
+
+        <div id="menuOpciones" style="display: none;">
+            <button onclick="mostrarPreguntas('cuentaAhorros')">Cuenta de Ahorros</button>
+            <button onclick="mostrarPreguntas('creditoVivienda')">Crédito de Vivienda</button>
+            <button onclick="mostrarPreguntas('cdt')">CDT</button>
+            <button onclick="mostrarPreguntas('microcredito')">Microcrédito</button>
+        </div>
+        <div id="preguntasContainer">
+    <script src="../JS/script-cdt.js"></script>
+    <script src="../JS/scriptchat.js"></script>
+</body>
+</html>

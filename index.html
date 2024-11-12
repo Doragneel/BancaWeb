@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco Caja Social - Página Principal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styleschatbot.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="app-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
+            <img src="IMAGENES/app-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
             <nav>
-                <a href="#" class="btn btn-ghost">Personas</a>
-                <a href="#" class="btn btn-ghost">Empresas</a>
-                <a href="#" class="btn btn-primary">Ingresa a tu portal</a>
+                <a href="#" class="btn btn-ghost" name="Personas">Personas</a>
+                <a href="#" class="btn btn-ghost" name="Empresas">Empresas</a>
+                <a href="#" class="btn btn-primary" name="Login">Ingresa a tu portal</a>
             </nav>
         </div>
     </header>
@@ -21,9 +22,9 @@
     <main class="container">
         <section class="carousel">
             <div class="carousel-inner">
-                <img src="colmena-seguros-segundario.png" alt="Promoción Crédito de Vivienda" class="active">
-                <img src="1609-banner-prueba-nuevo-portal.png" alt="Cuenta de Ahorros">
-                <img src="banner-giros-con-visa.png" alt="Tarjeta de Crédito">
+                <img src="IMAGENES/colmena-seguros-segundario.png" alt="Promoción Crédito de Vivienda" class="active">
+                <img src="IMAGENES/1609-banner-prueba-nuevo-portal.png" alt="Cuenta de Ahorros">
+                <img src="IMAGENES/banner-giros-con-visa.png" alt="Tarjeta de Crédito">
             </div>
             <button class="carousel-btn prev" aria-label="Anterior">&lt;</button>
             <button class="carousel-btn next" aria-label="Siguiente">&gt;</button>
@@ -33,22 +34,22 @@
             <div class="card">
                 <h2>Cuenta de Ahorros</h2>
                 <p>Ahorra con nosotros y disfruta de beneficios exclusivos.</p>
-                <a href="#" class="btn">Abrir Cuenta</a>
+                <a href="#" class="btn" name="CuentadeAhorros">Abrir Cuenta</a>
             </div>
             <div class="card">
                 <h2>Crédito de Vivienda</h2>
                 <p>Haz realidad el sueño de tener casa propia con nuestros créditos.</p>
-                <a href="#" class="btn">Solicitar Crédito</a>
+                <a href="#" class="btn" name="CreditodeVivienda">Solicitar Crédito</a>
             </div>
             <div class="card">
                 <h2>CDT</h2>
                 <p>Invierte y haz crecer tu dinero con nuestros Certificados de Depósito a Término.</p>
-                <a href="#" class="btn">Abrir CDT</a>
+                <a href="#" class="btn" name="CDT">Abrir CDT</a>
             </div>
             <div class="card">
                 <h2>Microcrédito</h2>
                 <p>Impulsa tu negocio con nuestros microcréditos diseñados para emprendedores.</p>
-                <a href="#" class="btn">Solicitar Microcrédito</a>
+                <a href="#" class="btn" name="Microcredito">Solicitar Microcrédito</a>
             </div>
         </section>
     </main>
@@ -82,7 +83,36 @@
             <p class="copyright">&copy; 2024 Banco Caja Social. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <img id="chatbotButton" src="IMAGENES/app-banco-caja-social.png" alt="Abrir Chat" style="cursor: pointer; width: 75px; height: 75px;">
+    <div id="chatbotContainer" style="display: none;">
+        <div>
+            <span>Asistente Virtual</span>
 
-    <script src="script.js"></script>
+            <button id="closeChat">Cerrar</button>
+            <button id="inicioChat">Atras</button>
+        </div>
+        <div id="contenidoChat">
+ 
+            <button id="btnConsultaCuenta">Realizar consulta de cuenta</button>
+            <button id="btnPreguntas">Preguntas</button>
+        </div>
+    
+
+        <div id="formConsulta" style="display: none;">
+            <p>Hola, para verificar tu cuenta ingresa tu número de identificación:</p>
+            <input type="text" id="identificacion" placeholder="Número de Identificación">
+            <div id="respuesta" class="respuestasfrecuentes"></div>
+        </div>
+
+        <div id="menuOpciones" style="display: none;">
+            <button onclick="mostrarPreguntas('cuentaAhorros')">Cuenta de Ahorros</button>
+            <button onclick="mostrarPreguntas('creditoVivienda')">Crédito de Vivienda</button>
+            <button onclick="mostrarPreguntas('cdt')">CDT</button>
+            <button onclick="mostrarPreguntas('microcredito')">Microcrédito</button>
+        </div>
+        <div id="preguntasContainer">
+    <script src="JS/script.js"></script>
+    <script src="JS/scriptchat.js"></script>
+    
 </body>
 </html>

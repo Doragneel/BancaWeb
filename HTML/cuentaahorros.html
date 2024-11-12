@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta de Ahorros - Banco Caja Social</title>
-    <link rel="stylesheet" href="styles-cuenta-ahorros.css">
+    <link rel="stylesheet" href="../CSS/styles-cuenta-ahorros.css">
+    <link rel="stylesheet" href="../CSS/styleschatbot.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="app-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
+            <img src="../IMAGENES/app-banco-caja-social.png" alt="Logo Banco Caja Social" class="logo">
             <nav>
-                <a href="#" class="btn btn-ghost">Inicio</a>
+                <a href="../index.html" class="btn btn-ghost">Inicio</a>
                 <a href="#" class="btn btn-ghost">Productos</a>
-                <a href="#" class="btn btn-primary">Ingresa a tu portal</a>
+                <a href="login.html" class="btn btn-primary">Ingresa a tu portal</a>
             </nav>
         </div>
     </header>
@@ -27,29 +28,29 @@
                 <p>Nuestra Cuenta de Ahorros te ofrece seguridad, rentabilidad y facilidad para manejar tu dinero.</p>
                 <a href="#abrir-cuenta" class="btn btn-primary">Abrir cuenta ahora</a>
             </div>
-            <img src="mi-banco-amigo-evento.png" alt="Persona ahorrando dinero" class="hero-image">
+            <img src="../IMAGENES/mi-banco-amigo-evento.png" alt="Persona ahorrando dinero" class="hero-image">
         </section>
 
         <section class="benefits">
             <h2>Beneficios de nuestra Cuenta de Ahorros</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <img src="credito1.png" alt="Ícono sin cuota de manejo" class="benefit-icon">
+                    <img src="../IMAGENES/credito1.png" alt="Ícono sin cuota de manejo" class="benefit-icon">
                     <h3>Sin cuota de manejo</h3>
                     <p>Disfruta de tu cuenta sin costos mensuales de administración.</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="intereses.png" alt="Ícono de intereses" class="benefit-icon">
+                    <img src="../IMAGENES/intereses.png" alt="Ícono de intereses" class="benefit-icon">
                     <h3>Intereses diarios</h3>
                     <p>Gana intereses sobre tu saldo diario, pagados mensualmente.</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="celu.png" alt="Ícono de app móvil" class="benefit-icon">
+                    <img src="../IMAGENES/celu.png" alt="Ícono de app móvil" class="benefit-icon">
                     <h3>Banca móvil</h3>
                     <p>Accede a tu cuenta desde cualquier lugar con nuestra app.</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="seguridad.png" alt="Ícono de seguridad" class="benefit-icon">
+                    <img src="../IMAGENES/seguridad.png" alt="Ícono de seguridad" class="benefit-icon">
                     <h3>Seguridad garantizada</h3>
                     <p>Tu dinero está protegido con los más altos estándares de seguridad.</p>
                 </div>
@@ -115,7 +116,7 @@
             <a href="#" class="btn btn-primary">Iniciar proceso en línea</a>
         </section>
 
-        <section class="faq">
+        <!-- <section class="faq">
             <h2>Preguntas frecuentes</h2>
             <div class="accordion">
                 <div class="accordion-item">
@@ -137,7 +138,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
     <footer>
         <div class="container">
@@ -168,7 +169,36 @@
             <p class="copyright">&copy; 2024 Banco Caja Social. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <img id="chatbotButton" src="../IMAGENES/app-banco-caja-social.png" alt="Abrir Chat" style="cursor: pointer; width: 75px; height: 75px;">
+    <div id="chatbotContainer" style="display: none;">
+        <div>
+            <span>Asistente Virtual</span>
 
-    <script src="script-cuenta-ahorros.js"></script>
+            <button id="closeChat">Cerrar</button>
+            <button id="inicioChat">Atras</button>
+        </div>
+        <div id="contenidoChat">
+ 
+            <button id="btnConsultaCuenta">Realizar consulta de cuenta</button>
+            <button id="btnPreguntas">Preguntas</button>
+        </div>
+    
+
+        <div id="formConsulta" style="display: none;">
+            <p>Hola, para verificar tu cuenta ingresa tu número de identificación:</p>
+            <input type="text" id="identificacion" placeholder="Número de Identificación">
+            <div id="respuesta" class="respuestasfrecuentes"></div>
+        </div>
+
+        <div id="menuOpciones" style="display: none;">
+            <button onclick="mostrarPreguntas('cuentaAhorros')">Cuenta de Ahorros</button>
+            <button onclick="mostrarPreguntas('creditoVivienda')">Crédito de Vivienda</button>
+            <button onclick="mostrarPreguntas('cdt')">CDT</button>
+            <button onclick="mostrarPreguntas('microcredito')">Microcrédito</button>
+        </div>
+        <div id="preguntasContainer">
+
+    <script src="../JS/script-cuenta-ahorros.js"></script>
+    <script src="../JS/scriptchat.js"></script>
 </body>
 </html>
